@@ -1,0 +1,108 @@
+$header-color: #f0f0f0;
+$color-primary: #0029ff;
+$management-color: #e9ecef;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif !important;
+}
+
+.header {
+  box-shadow: 0px 4px 4px 0px #00000040;
+  background-color: $header-color;
+
+  &-toggle {
+    &::after {
+      display: none !important ;
+    }
+  }
+
+  &-dots {
+    color: #3683f0;
+  }
+
+  @media screen and (max-width: 430px) {
+    justify-content: center !important;
+    gap: 15px;
+  }
+}
+
+.dashboard {
+  &__heading {
+    color: $color-primary;
+  }
+
+  &__btn {
+    border: none;
+    border-radius: 10px;
+    font-size: 0.75em;
+    background-color: $color-primary;
+  }
+
+  @media screen and (max-width: 430px) {
+    justify-content: center !important;
+    gap: 10px;
+  }
+}
+
+.management {
+  background-color: $management-color;
+  border-radius: 5px;
+
+  p {
+    font-size: 0.875em;
+  }
+}
+
+.description {
+  &__card {
+    box-shadow: 0px -4px 4px 0px #00000040;
+    border-radius: 15px;
+    overflow: hidden;
+    min-height: 580px;
+    height: 100% !important;
+
+    &--heading {
+      img {
+        top: 50%;
+        left: 92%;
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+  .accordion-button {
+    background-color: #feffc033;
+    box-shadow: none;
+    position: relative;
+    span {
+      margin-left: 5em;
+    }
+
+    &::after {
+      margin-left: 0;
+      position: absolute;
+    }
+  }
+
+  .textBox-text {
+    background-color: #0000000d;
+  }
+
+  .textBox-input {
+    margin-top: -20px;
+    box-shadow: none;
+    min-height: 80px;
+  }
+
+  &__dropdown {
+    select {
+      box-shadow: 0px 2px 4px 0px #00000040;
+      border-radius: 5px;
+      border: none;
+    }
+  }
+}
